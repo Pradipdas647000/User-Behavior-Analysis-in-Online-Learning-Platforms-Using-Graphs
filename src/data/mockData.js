@@ -1,5 +1,4 @@
 import { tokens } from "../theme";
-
 export const mockDataTeam = [
   {
     id: 1,
@@ -8,6 +7,7 @@ export const mockDataTeam = [
     age: 19,
     phone: "6295289626",
     access: "web developer",
+    dash:"/dashboardTushar",
   },
   {
     id: 2,
@@ -15,7 +15,8 @@ export const mockDataTeam = [
     email: "Pradip123@gmil.com",
     age: 19,
     phone: "83710 74580",
-    access: "Fullstark",
+    access: "Fullstack" ,
+    dash:"/dashboard",
   },
   {
     id: 3,
@@ -24,6 +25,7 @@ export const mockDataTeam = [
     age: 19,
     phone: "81672 76728",
     access: "C++ devoloper",
+    dash:"/dashboardSurya",
   },
   {
     id: 4,
@@ -32,6 +34,7 @@ export const mockDataTeam = [
     age: 16,
     phone: "9845687534",
     access: "UI/UX designer",
+    dash:"/dashboardSpiderman",
   },
   {
     id: 5,
@@ -40,6 +43,7 @@ export const mockDataTeam = [
     age: 31,
     phone: "7098456095",
     access: "photo designer",
+    dash:"/dashboard",
   },
   {
     id: 6,
@@ -48,6 +52,7 @@ export const mockDataTeam = [
     age: 32,
     phone: "9056429845",
     access: "logo designer",
+    dash:"/dashboard",
   },
   {
     id: 7,
@@ -56,6 +61,7 @@ export const mockDataTeam = [
     age: 19,
     phone: "9459274394",
     access: "video editor",
+    dash:"/dashboard",
   },
   {
     id: 8,
@@ -64,6 +70,7 @@ export const mockDataTeam = [
     age: 21,
     phone: "7804584329",
     access: "fasion designer",
+    dash:"/dashboard",
   },
   {
     id: 9,
@@ -72,6 +79,7 @@ export const mockDataTeam = [
     age: 23,
     phone: "9048456978",
     access: "Java devoloper",
+    dash:"/dashboard",
   },
 ];
 

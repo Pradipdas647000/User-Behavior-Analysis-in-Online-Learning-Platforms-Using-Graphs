@@ -40,6 +40,8 @@ function App() {
               <Route path="/faq" element={<FAQ />} />
               <Route path="/calendar" element={<Calendar />} />
               <Route path="/geography" element={<Geography />} />
+              <Route path="/dashboard" element={<Dashboard />} />
+
             </Routes>
           </main>
         </div>

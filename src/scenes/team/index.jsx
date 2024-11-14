@@ -1,16 +1,20 @@
-import { Box, Typography, useTheme } from "@mui/material";
+import { Box, useTheme, Button } from "@mui/material";
 import { DataGrid } from "@mui/x-data-grid";
 import { tokens } from "../../theme";
 import { mockDataTeam } from "../../data/mockData";
-import AdminPanelSettingsOutlinedIcon from "@mui/icons-material/AdminPanelSettingsOutlined";
-import LockOpenOutlinedIcon from "@mui/icons-material/LockOpenOutlined";
-import SecurityOutlinedIcon from "@mui/icons-material/SecurityOutlined";
+
+
 import Header from "../../components/Header";
+import {  useNavigate } from "react-router-dom";
+
 
 
 const Team = () => {
   const theme = useTheme();
   const colors = tokens(theme.palette.mode);
+  const navigate =useNavigate();
+
+  // Define the columns for the DataGrid
   const columns = [
     { field: "id", headerName: "ID" },
     {
@@ -40,29 +44,32 @@ const Team = () => {
       field: "accessLevel",
       headerName: "Access Level",
       flex: 1,
-      renderCell: ({ row: { access } }) => {
+      renderCell: ({ row: { access, dash } }) => {
         return (
           <Box
-            width="60%"
+            width="100%"
             m="0 auto"
             p="5px"
             display="flex"
-            justifyContent="center"
-            backgroundColor={
-              access === "admin"
-                ? colors.greenAccent[600]
-                : access === "manager"
-                ? colors.greenAccent[700]
-                : colors.greenAccent[700]
-            }
+            flexDirection="column"
+            alignItems="center"
+           
             borderRadius="4px"
           >
-            {access === "admin" && <AdminPanelSettingsOutlinedIcon />}
-            {access === "manager" && <SecurityOutlinedIcon />}
-            {access === "user" && <LockOpenOutlinedIcon />}
-            <Typography color={colors.grey[100]} sx={{ ml: "5px" }}>
+            {/* Role-specific button */}
+            <Button
+              variant="contained"
+              color="secondary"
+              size="medium"
+              sx={{ mt: "5px" }}
+            
+              onClick={() => navigate(dash)}
+            >
+              
               {access}
-            </Typography>
+            </Button>
+            
+            
           </Box>
         );
       },
@@ -72,6 +79,8 @@ const Team = () => {
   return (
     <Box m="20px">
       <Header title="TEAM" subtitle="Managing the Team Members" />
+
+      {/* Data Grid Section */}
       <Box
         m="40px 0 0 0"
         height="75vh"
